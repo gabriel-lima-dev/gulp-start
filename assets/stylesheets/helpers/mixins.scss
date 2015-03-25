@@ -1,0 +1,173 @@
+// Mixins
+// -----------------------------------
+
+// Size
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+// Border radius
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+// Rounded
+@mixin rounded($size) {
+  @include square($size);
+  @include border-radius(100%);
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opactiy=$opacity);
+}
+
+@mixin opaque {
+  @include opacity(100);
+}
+
+// Blur
+@mixin blur($value) {
+  -webkit-filter: blur($value);
+  -moz-filter: blur($value);
+  -ms-filter: blur($value);
+  filter: blur($value);
+}
+
+// Box shadow
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// Transitions
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+   -moz-transition: $transition;
+     -o-transition: $transition;
+      transition: $transition;
+}
+
+// Transform
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+   -moz-transform: $transform;
+     -o-transform: $transform;
+      transform: $transform;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+   -moz-box-sizing: $boxmodel;
+      box-sizing: $boxmodel;
+}
+
+// Animation
+@mixin animation ($name, $duration: 300ms, $interaction: 1, $delay: 0, $ease: ease) {
+  -webkit-animation: $name $duration $interaction $delay $ease;
+  -moz-animation: $name $duration $interaction $delay $ease;
+  -ms-animation: $name $duration $interaction $delay $ease;
+  -o-animation: $name $duration $interaction $delay $ease;
+  animation: $name $duration $interaction $delay $ease;
+}
+
+// Gradient Linear
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor;
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
+  background-image: -o-linear-gradient(top, $fromColor, $toColor);
+  background-image: linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#{$from-color}", EndColorStr="#{$to-color}");
+}
+
+// Custom mixins
+@mixin icon-arrow-down($color, $size) {
+  border-style: solid;
+  border-color: $color transparent transparent transparent;
+  border-width: $size $size 0 $size;
+}
+
+// Rgba fallback
+@mixin rgba-fallback($color, $value) {
+  background-color: lighten($color, $value);
+  background-color: fadeout($color, $value);
+}
+
+// Rgba border fallback
+@mixin rgba-border-fallback($color, $value) {
+  border-color: lighten($color, $value);
+  border-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-top-fallback($color, $value) {
+  border-top-color: lighten($color, $value);
+  border-top-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-left-fallback($color, $value) {
+  border-left-color: lighten($color, $value);
+  border-left-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-right-fallback($color, $value) {
+  border-right-color: lighten($color, $value);
+  border-right-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-bottom-fallback($color, $value) {
+  border-bottom-color: lighten($color, $value);
+  border-bottom-color: fadeout($color, $value);
+}
+
+// Selecion
+@mixin selection($bg, $color, $t-shadow) {
+  ::selection {
+    background: $bg;
+    color: $color;
+    text-shadow: $t-shadow;
+  }
+  ::-moz-selection {
+    background: $bg;
+    color: $color;
+    text-shadow: $t-shadow;
+  }
+}
+
+// Placeholder
+@mixin placeholder($color: $placeholderText, $text-shadow: $placeholderTextShadow) {
+  :-moz-placeholder {
+    color: $color;
+    text-shadow: 0 1px 1px $text-shadow;
+  }
+  ::-moz-placeholder {
+    color: $color;
+    text-shadow: 0 1px 1px $text-shadow;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+    text-shadow: 0 1px 1px $text-shadow;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+    text-shadow: 0 1px 1px $text-shadow;
+  }
+}

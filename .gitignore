@@ -26,3 +26,15 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# Modules
+node_modules/
+npm-debug.log
+tmp
+
+# Mac crap
+.DS_Store
+
+# Bower components
+bower_components/
+assets/vendors/

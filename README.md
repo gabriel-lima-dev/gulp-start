@@ -1,2 +1,2 @@
 # gulp-start
-Simple scaffolding gulp project.
+A simple scaffolding Gulp project.

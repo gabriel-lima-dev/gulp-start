@@ -1,0 +1,11 @@
+// Custom icons
+// -----------------------------------
+
+i {
+  position: relative;
+  @extend .inline-middle;
+}
+
+.icon-instagram {
+  // @include sprite($icon-instagram);
+}
