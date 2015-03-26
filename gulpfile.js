@@ -25,8 +25,8 @@ gulp.task('spriteBuild', ['sprite', 'sass']);
 
 // Default task
 gulp.task('default', ['jshint', 'concat', 'copy', 'sprite', 'sass', 'browsersync'], function() {
-  gulp.watch(paths.scss + '**/*.scss', ['sass']);
-  gulp.watch([paths.js + '**/*.js', paths.js + 'main.js'], ['concat']);
+  gulp.watch(paths.src_scss + '**/*.scss', ['sass']);
+  gulp.watch([paths.src_js + '**/*.js', paths.js + 'main.js'], ['concat']);
   gulp.watch(paths.root + '*.html').on('change', reload);
 });
 
