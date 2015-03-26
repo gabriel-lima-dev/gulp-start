@@ -13,6 +13,7 @@ function getTask(task) {
 gulp.task('copy', getTask('copy'));
 gulp.task('sass', getTask('sass'));
 gulp.task('csso', getTask('csso'));
+gulp.task('bump', getTask('bump'));
 gulp.task('concat', getTask('concat'));
 gulp.task('sprite', getTask('sprite'));
 gulp.task('jshint', getTask('jshint'));
@@ -20,15 +21,17 @@ gulp.task('uglify', getTask('uglify'));
 gulp.task('imagemin', getTask('imagemin'));
 gulp.task('browsersync', getTask('browsersync'));
 
-// Sprite Build task
-gulp.task('spriteBuild', ['sprite', 'sass']);
-
 // Default task
 gulp.task('default', ['jshint', 'concat', 'copy', 'sprite', 'sass', 'browsersync'], function() {
   gulp.watch(paths.src_scss + '**/*.scss', ['sass']);
   gulp.watch([paths.src_js + '**/*.js', paths.js + 'main.js'], ['concat']);
-  gulp.watch(paths.root + '*.html').on('change', reload);
 });
+
+// Sprite Build task
+gulp.task('spriteBuild', ['sprite', 'sass']);
 
 // Dist task
 gulp.task('dist', ['uglify', 'csso', 'imagemin']);
+
+// Version task
+gulp.task('version', ['bump']);
