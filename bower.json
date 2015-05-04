@@ -1,20 +1,14 @@
 {
-  "name": "div-skeleton",
+  "name": "gulp-start",
   "version": "0.1.0",
-  "description": "A quick start bootstrap for our projects.",
+  "description": "A simple scaffolding project using Gulp. This will help you precompiling assets, managing dependencies and optimizing your work.",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/gabrieldiv64/div64-skeleton"
+    "url": "https://github.com/gabrihellmateus/gulp-start"
   },
   "authors": {
-    "name": [
-      "Gabriel Mateus",
-      "Bruno Possidonio"
-    ],
-    "email": [
-      "gabriel@div64.com",
-      "bruno@div64.com"
-    ]
+    "name": "Gabriel Mateus",
+    "email": "contato@gabrielmateus.com",
   },
   "license": "MIT",
   "ignore": [

@@ -1,5 +1,5 @@
-# DIV64 - Skeleton
-> A scaffold for our projects.
+# Gulp start
+> A simple scaffolding project using Gulp. This will help you precompiling assets, managing dependencies and optimizing your work.
 
 ## Getting started
 This project requires [Bower](http://bower.io/) and [Gulp](http://gulpjs.com/)
@@ -33,4 +33,4 @@ Change your `.bower.json` with the dependencies of you nedd, also change the pat
 + [Parsley](http://parsleyjs.org/)
 
 ## License
-Copyright (c) 2015 DIV64 Licensed under the MIT license.
+Copyright (c) 2015 Gabriel Mateus Licensed under the MIT license.
