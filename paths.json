@@ -1,18 +1,27 @@
 {
-  "root":        "./",
+  "src_assets":       "src/assets/",
+  "src_vendors":      "src/assets/vendors/",
+  "src_templates":    "src/templates/",
+  "src_modules":      "src/modules/",
+  "src_locale":       "src/locale/",
+  "src_code":         "src/code/",
 
-  "src":         "./assets/",
-  "src_js":      "./assets/javascripts/",
-  "src_scss":    "./assets/stylesheets/",
-  "src_img":     "./assets/images/",
-  "src_sprite":  "./assets/images/sprite/",
-  "src_fonts":   "./assets/fonts/",
-  "src_vendor":  "./assets/vendors/",
+  "dest_assets":       "app/skin/frontend/",
+  "dest_vendors":      "app/lib/",
+  "dest_templates":    "app/app/design/frontend/",
+  "dest_modules":      "app/app/code/local/",
+  "dest_modules_etc":  "app/app/etc/modules/",
+  "dest_locale":       "app/app/locale/",
+  "dest_code":         "app/",
 
-  "dest":        "./public/",
-  "dest_js":     "./public/js/",
-  "dest_css":    "./public/css/",
-  "dest_img":    "./public/img/",
-  "dest_vendor": "./public/vendor/",
-  "dest_fonts":  "./public/fonts/"
+  "dist_assets":       "dist/skin/frontend/",
+  "dist_vendors":      "dist/lib/",
+  "dist_templates":    "dist/app/design/frontend/",
+  "dist_modules":      "dist/app/code/local/",
+  "dist_locale":       "dist/app/locale/",
+  "dist_code":         "dist/",
+
+  "themes_dir": [
+    "juk"
+  ]
 }

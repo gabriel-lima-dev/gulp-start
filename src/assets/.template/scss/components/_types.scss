@@ -1,0 +1,26 @@
+// General types style
+// -----------------------------------
+
+a {
+  color: $color-default;
+  text-decoration: none;
+  transition: all .1s ease;
+
+  &:hover,
+  &:active { color: darken($color-default, 10%); }
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li { list-style: none; }
+
+button {
+  outline: none;
+  cursor: pointer;
+
+  &:focus { outline: none; }
+}

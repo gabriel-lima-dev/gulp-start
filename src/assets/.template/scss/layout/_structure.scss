@@ -1,0 +1,30 @@
+// Structure
+// -----------------------------------
+
+* { box-sizing: border-box; }
+
+body {
+  height: 100%;
+  color: $color-default;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  font-weight: 400;
+  font-family: $font-sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Wrappers
+.container {
+  position: relative;
+  margin: 0 auto;
+
+  @include MQ(ExtraLarge) { }
+
+  @include MQ(Large) { }
+
+  @include MQ(Medium) { }
+
+  @include MQ(Small) { }
+}

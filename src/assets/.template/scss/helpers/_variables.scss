@@ -1,0 +1,23 @@
+// Variables
+// -----------------------------------
+
+// Fonts
+$font-sans-serif: Helvetica, Arial, sans-serif;
+$font-size-default: 14px;
+$line-height-default: 16px;
+
+// Colors
+$color-black: #1d1d1b;
+$color-default: $color-black;
+
+// Media queries breakpoints
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1200px;
+$breakpoint-extra-large: $breakpoint-large + 1;
+
+// Assets path
+$assets-path: '../';
+$images-path: '../img/';
+$fonts-path: '../fonts/';
+$vendors-path: '../vendors/';

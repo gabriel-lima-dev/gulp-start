@@ -1,13 +1,22 @@
 {
-  "name": "gulp-start",
-  "version": "0.2.0",
-  "homepage": "https://github.com/gabrihellmateus/gulp-start",
-  "authors": [
-    "Gabriel Mateus <contato@gabrielmateus.com>"
-  ],
-  "description": "A simple scaffolding Gulp project.",
+  "name": "div-skeleton",
+  "version": "0.1.0",
+  "description": "A quick start bootstrap for our projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/gabrieldiv64/div64-skeleton"
+  },
+  "authors": {
+    "name": [
+      "Gabriel Mateus",
+      "Bruno Possidonio"
+    ],
+    "email": [
+      "gabriel@div64.com",
+      "bruno@div64.com"
+    ]
+  },
   "license": "MIT",
-  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",

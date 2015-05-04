@@ -1,13 +1,16 @@
-module.exports = function(gulp, plugins, browserSync, reload, paths) {
+module.exports = function(gulp, plugins, browserSync, reload, paths, merge, path) {
   return function () {
-    gulp.src(paths.src_scss + 'imports.scss')
-      .pipe(plugins.sass({
-        onError: function(error) {
-          return plugins.notify().write(error);
-        }
-      }))
-      .pipe(plugins.rename('app.css'))
-      .pipe(gulp.dest(paths.dest_css))
-      .pipe(reload({stream: true}));
-    };
+    var folders = paths.themes_dir;
+    var tasks = folders.map(function(folder) {
+      return gulp.src(path.join(paths.src_assets, folder, '/scss/*.scss'))
+        .pipe(plugins.debug({ title: 'Build SCSS files' }))
+        .pipe(plugins.sass({
+          onError: function(error) {
+            return plugins.notify().write(error);
+          }
+        }))
+        .pipe(gulp.dest(paths.src_assets + folder + '/css/'));
+    });
+    return merge(tasks);
+  };
 };

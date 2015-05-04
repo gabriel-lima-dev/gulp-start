@@ -84,6 +84,7 @@
 
   // Custom Globals - additional predefined global variables
   "globals" : {
-    "jQuery": true
+    "jQuery": false,
+    "$": false
   }
 }

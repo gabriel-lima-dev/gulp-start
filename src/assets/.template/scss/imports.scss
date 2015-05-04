@@ -1,0 +1,25 @@
+// Vendors
+// Put your vendors paths here after bower install
+// @import "../vendors/normalize-scss/_normalize";
+
+// Helpers
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "helpers/_helpers";
+@import "helpers/_sprite";
+
+// Components
+@import "components/_icons";
+@import "components/_fonts";
+@import "components/_types";
+@import "components/_forms";
+@import "components/_tables";
+@import "components/_buttons";
+
+// Layout
+@import "layout/_structure";
+@import "layout/_main-header";
+@import "layout/_main-footer";
+
+// Print
+@import "components/_print";

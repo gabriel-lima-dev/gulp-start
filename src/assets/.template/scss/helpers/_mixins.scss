@@ -1,0 +1,117 @@
+// Mixins
+// -----------------------------------
+
+// Size
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+// Border radius
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+// Rounded
+@mixin rounded($size) {
+  @include square($size);
+  @include border-radius(100%);
+}
+
+// Arrow border icons
+@mixin icon-arrow-down($color, $size) {
+  border-style: solid;
+  border-color: $color transparent transparent transparent;
+  border-width: $size $size 0 $size;
+}
+
+// Rgba fallback
+@mixin rgba-fallback($color, $value) {
+  background-color: lighten($color, $value);
+  background-color: fadeout($color, $value);
+}
+
+// Rgba border fallback
+@mixin rgba-border-fallback($color, $value) {
+  border-color: lighten($color, $value);
+  border-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-top-fallback($color, $value) {
+  border-top-color: lighten($color, $value);
+  border-top-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-left-fallback($color, $value) {
+  border-left-color: lighten($color, $value);
+  border-left-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-right-fallback($color, $value) {
+  border-right-color: lighten($color, $value);
+  border-right-color: fadeout($color, $value);
+}
+
+@mixin rgba-border-bottom-fallback($color, $value) {
+  border-bottom-color: lighten($color, $value);
+  border-bottom-color: fadeout($color, $value);
+}
+
+// Selecion
+@mixin selection($bg, $color, $t-shadow) {
+  ::selection {
+    background: $bg;
+    color: $color;
+    text-shadow: $t-shadow;
+  }
+  ::-moz-selection {
+    background: $bg;
+    color: $color;
+    text-shadow: $t-shadow;
+  }
+}
+
+// Placeholder
+@mixin placeholder($color: $placeholderText) {
+  :-moz-placeholder { color: $color; }
+  ::-moz-placeholder { color: $color; }
+  :-ms-input-placeholder { color: $color; }
+  ::-webkit-input-placeholder { color: $color; }
+}
+
+// Media Queries Breakpoints
+@mixin MQ($canvas) {
+  @if $canvas == Small {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $canvas == Medium {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $canvas == Large {
+    @media (min-width: $breakpoint-medium + 1) and (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $canvas == ExtraLarge {
+    @media (min-width: $breakpoint-extra-large) {
+      @content;
+    }
+  }
+}
