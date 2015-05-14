@@ -54,10 +54,12 @@ printf '{
     "gulp-jshint": "^1.9.4",
     "gulp-load-plugins": "^0.8.1",
     "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.3.3",
     "gulp-uglify": "^1.1.0",
-    "gulp.spritesmith": "^3.3.1"
+    "gulp.spritesmith": "^3.3.1",
+    "jshint-stylish": "^1.0.2"
   },
   "dependencies": {
     "browser-sync": "^2.3.1"

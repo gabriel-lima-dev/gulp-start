@@ -5,6 +5,7 @@ module.exports = function(gulp, plugins, browserSync, reload, paths, merge, path
       return gulp.src(path.join(paths.src_assets, folder, '/css/*.css'))
         .pipe(plugins.debug({ title: 'Minifying CSS files' }))
         .pipe(plugins.csso())
+        .pipe(plugins.rename({ extname: '.min.css' }))
         .pipe(gulp.dest(paths.src_assets + folder + '/css/'));
     });
     return merge(tasks);

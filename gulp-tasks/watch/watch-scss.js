@@ -4,12 +4,14 @@ module.exports = function(gulp, plugins, browserSync, reload, paths, merge, path
     var tasks = folders.map(function(folder) {
       return plugins.watch(path.join(paths.src_assets, folder, '/scss/**/*.scss'), function() {
         gulp.src(path.join(paths.src_assets, folder, '/scss/*.scss'))
-          .pipe(plugins.debug({ title: 'Watch SCSS files' }))
-          .pipe(plugins.sass({
-            onError: function(error) {
-              return plugins.notify().write(error);
-            }
+          .pipe(plugins.plumber({
+            errorHandler: plugins.notify.onError({
+              sound: false,
+              message: "SHIT! - <%= error.message %>"
+            })
           }))
+          .pipe(plugins.debug({ title: 'Watch SCSS files' }))
+          .pipe(plugins.sass())
           .pipe(plugins.autoprefixer({
             browsers: ['last 3 versions'],
             cascade: false

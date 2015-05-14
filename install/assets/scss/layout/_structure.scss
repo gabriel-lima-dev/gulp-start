@@ -20,11 +20,11 @@ body {
   position: relative;
   margin: 0 auto;
 
-  @include MQ(ExtraLarge) { }
+  @include breakpoint(ExtraLarge) { }
 
-  @include MQ(Large) { }
+  @include breakpoint(Large) { }
 
-  @include MQ(Medium) { }
+  @include breakpoint(Medium) { }
 
-  @include MQ(Small) { }
+  @include breakpoint(Small) { }
 }

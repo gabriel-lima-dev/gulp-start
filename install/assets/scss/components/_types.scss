@@ -17,10 +17,3 @@ ol {
 }
 
 li { list-style: none; }
-
-button {
-  outline: none;
-  cursor: pointer;
-
-  &:focus { outline: none; }
-}

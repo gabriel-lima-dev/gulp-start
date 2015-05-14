@@ -13,7 +13,7 @@ module.exports = function(gulp, plugins, browserSync, reload, paths) {
         paths.src_locale    +    '**/*',
         paths.src_modules   +    '**/*.php'
       ],
-      proxy: 'http://localhost/div64-skeleton/app/app/design/frontend/'
+      proxy: 'http://localhost:9000/<your-project-url>'
     });
   };
 };

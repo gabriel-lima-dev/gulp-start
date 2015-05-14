@@ -1,7 +1,7 @@
-// Helpers classes
+// Helpers - placeholders
 // -----------------------------------
 
-.clearfix {
+%clearfix {
   &:before,
   &:after {
     content: " ";
@@ -12,62 +12,62 @@
 }
 
 // Image replacement
-.ir {
+%ir {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
 }
 
 // Alignments
-.align-left { text-align: left; }
-.align-center { text-align: center; }
-.align-right { text-align: right; }
+%align-left { text-align: left; }
+%align-center { text-align: center; }
+%align-right { text-align: right; }
 
 // Floats
-.pull-left { float: left; }
-.pull-right { float: right; }
+%pull-left { float: left; }
+%pull-right { float: right; }
 
 // Center
-.center-vertically {
+%center-vertically {
   display: table-cell;
   vertical-align: middle;
 }
 
-.center-block {
+%center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 // Inlines
-.inline-top {
+%inline-top {
   display: inline-block;
   vertical-align: top;
 }
 
-.inline-middle {
+%inline-middle {
   display: inline-block;
   vertical-align: middle;
 }
 
-.inline-bottom {
+%inline-bottom {
   display: inline-block;
   vertical-align: bottom;
 }
 
 // Display
-.show { display: block !important; }
-.hide { display: none !important; }
+%show { display: block; }
+%hide { display: none; }
 
-.invisible {
+%invisible {
   opacity: 0;
   visibility: hidden;
 }
 
-.visible {
+%visible {
   opacity: 1;
   visibility: visible;
 }
 
-.no-padding { padding: 0 !important; }
-.no-margin { margin: 0 !important; }
+%no-padding { padding: 0; }
+%no-margin { margin: 0; }

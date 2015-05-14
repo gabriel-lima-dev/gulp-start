@@ -2,6 +2,7 @@
 
 + [merge-stream](https://github.com/grncdr/merge-stream)
 + [browser-sync](https://github.com/BrowserSync/browser-sync)
++ [jshint-stylish](https://github.com/sindresorhus/jshint-stylish)
 
 ## Gulp plugins
 
@@ -30,4 +31,8 @@ Others:
 + [gulp-watch](https://github.com/floatdrop/gulp-watch)
 + [gulp-debug](https://github.com/sindresorhus/gulp-debug)
 + [gulp-load-plugins](https://github.com/jackfranklin/gulp-load-plugins)
++ [gulp-plumber](https://github.com/floatdrop/gulp-plumber)
 
+#### Update
+
+To keep NPM dependencies updated we recommend: [David](https://github.com/alanshaw/david).

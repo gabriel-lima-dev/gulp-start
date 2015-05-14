@@ -1,27 +1,17 @@
 #!/bin/bash
 
-# Black        0;30     Dark Gray     1;30
-# Blue         0;34     Light Blue    1;34
-# Green        0;32     Light Green   1;32
-# Cyan         0;36     Light Cyan    1;36
-# Red          0;31     Light Red     1;31
-# Purple       0;35     Light Purple  1;35
-# Brown/Orange 0;33     Yellow        1;33
-# Light Gray   0;37     White         1;37
-
-# Vars
-_pathJsonDir_src="./install/laravel"
-_pathJson_src="./install/laravel/paths.json"
-_pathJson_dest="./"
-
 # Colors
-purple='\033[1;35m'
 red='\033[1;31m'
-green='\033[0;32m'
 gray='\033[0;37m'
 cyan='\033[0;36m'
+green='\033[0;32m'
 white='\033[1;37m'
 no_color='\033[0m'
+purple='\033[1;35m'
+light_green='\033[1;32m'
+
+# Vars
+_pathJson_dest="./"
 
 printf "${green}INSTALLING LARAVEL STRUCTURE ${no_color}\n\n"
 
@@ -79,10 +69,12 @@ printf '{
     "gulp-jshint": "^1.9.4",
     "gulp-load-plugins": "^0.8.1",
     "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^1.3.3",
     "gulp-uglify": "^1.1.0",
-    "gulp.spritesmith": "^3.3.1"
+    "gulp.spritesmith": "^3.3.1",
+    "jshint-stylish": "^1.0.2"
   },
   "dependencies": {
     "del": "^1.1.1",
