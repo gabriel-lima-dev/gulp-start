@@ -1,0 +1,103 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$test-bower-name: 'test-bower';
+$test-bower-x: 60px;
+$test-bower-y: 0px;
+$test-bower-offset-x: -60px;
+$test-bower-offset-y: 0px;
+$test-bower-width: 60px;
+$test-bower-height: 60px;
+$test-bower-total-width: 120px;
+$test-bower-total-height: 135px;
+$test-bower-image: 'src/assets/Magento/images/sprite.png';
+$test-bower: (60px, 0px, -60px, 0px, 60px, 60px, 120px, 135px, 'src/assets/Magento/images/sprite.png', 'test-bower', );
+$test-gulp-name: 'test-gulp';
+$test-gulp-x: 0px;
+$test-gulp-y: 0px;
+$test-gulp-offset-x: 0px;
+$test-gulp-offset-y: 0px;
+$test-gulp-width: 60px;
+$test-gulp-height: 135px;
+$test-gulp-total-width: 120px;
+$test-gulp-total-height: 135px;
+$test-gulp-image: 'src/assets/Magento/images/sprite.png';
+$test-gulp: (0px, 0px, 0px, 0px, 60px, 135px, 120px, 135px, 'src/assets/Magento/images/sprite.png', 'test-gulp', );
+$test-sass-name: 'test-sass';
+$test-sass-x: 60px;
+$test-sass-y: 60px;
+$test-sass-offset-x: -60px;
+$test-sass-offset-y: -60px;
+$test-sass-width: 60px;
+$test-sass-height: 45px;
+$test-sass-total-width: 120px;
+$test-sass-total-height: 135px;
+$test-sass-image: 'src/assets/Magento/images/sprite.png';
+$test-sass: (60px, 60px, -60px, -60px, 60px, 45px, 120px, 135px, 'src/assets/Magento/images/sprite.png', 'test-sass', );
+$spritesheet-width: 120px;
+$spritesheet-height: 135px;
+$spritesheet-image: 'src/assets/Magento/images/sprite.png';
+$spritesheet-sprites: ($test-bower, $test-gulp, $test-sass, );
+$spritesheet: (120px, 135px, 'src/assets/Magento/images/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,166 @@
+// Mixins
+// -----------------------------------
+
+// Size
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+// Border radius
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+// Rounded
+@mixin rounded($size) {
+  @include square($size);
+  @include border-radius(100%);
+}
+
+// Arrow border icons
+@mixin icon-arrow-top($color, $size) {
+  border-style: solid;
+  border-color:  transparent transparent $color transparent;
+  border-width: 0 $size $size $size;
+}
+
+@mixin icon-arrow-bottom($color, $size) {
+  border-style: solid;
+  border-color: $color transparent transparent transparent;
+  border-width: $size $size 0 $size;
+}
+
+@mixin icon-arrow-left($color, $size) {
+  border-style: solid;
+  border-color: transparent $color transparent transparent ;
+  border-width: $size $size  $size 0;
+}
+
+@mixin icon-arrow-right($color, $size) {
+  border-style: solid;
+  border-color: transparent transparent transparent $color;
+  border-width: $size 0 $size $size;
+}
+
+// Rgba fallback
+@mixin rgba-color-fallback($color, $value) {
+  color: $color;
+  color: fade-out($color, $value);
+}
+
+// Background
+@mixin rgba-bg-fallback($color, $value) {
+  background-color: $color;
+  background-color: fade-out($color, $value);
+}
+
+// Rgba border fallback
+@mixin rgba-border-fallback($color, $value) {
+  border-color: $color;
+  border-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-top-fallback($color, $value) {
+  border-top-color: $color;
+  border-top-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-left-fallback($color, $value) {
+  border-left-color: $color;
+  border-left-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-right-fallback($color, $value) {
+  border-right-color: $color;
+  border-right-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-bottom-fallback($color, $value) {
+  border-bottom-color: $color;
+  border-bottom-color: fade-out($color, $value);
+}
+
+// Link
+@mixin link($color) {
+  &:hover {
+    color: $color;
+    border-color: $color;
+  }
+}
+
+// Selecion
+@mixin selection($bg, $color, $t-shadow) {
+  ::selection {
+    background: $bg;
+    color: $color;
+    text-shadow: $t-shadow;
+  }
+  ::-moz-selection {
+    background: $bg;
+    color: $color;
+    text-shadow: $t-shadow;
+  }
+}
+
+// Placeholder
+@mixin placeholder($color: $placeholderText) {
+  :-moz-placeholder { color: $color; }
+  ::-moz-placeholder { color: $color; }
+  :-ms-input-placeholder { color: $color; }
+  ::-webkit-input-placeholder { color: $color; }
+}
+
+// Zindex management
+@function zindex($layer) {
+  @if not map-has-key($zindex, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($zindex, $layer);
+}
+
+// Media Queries Breakpoints
+@mixin breakpoint($point) {
+  @if $point == Phone {
+    @media (max-width: $breakpoint-phone) {
+      @content;
+    }
+  } @else if $point == Tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $point == Small {
+    @media (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $point == Medium {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  } @else if $point == Large {
+    @media (min-width: $breakpoint-medium + 1) and (max-width: $breakpoint-large) {
+      @content;
+    }
+  } @else if $point == ExtraLarge {
+    @media (min-width: $breakpoint-extra-large) {
+      @content;
+    }
+  }
+}

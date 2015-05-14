@@ -1,13 +1,16 @@
 {
   "name": "gulp-start",
-  "version": "0.2.0",
-  "homepage": "https://github.com/gabrihellmateus/gulp-start",
-  "authors": [
-    "Gabriel Mateus <contato@gabrielmateus.com>"
-  ],
-  "description": "A simple scaffolding Gulp project.",
+  "version": "0.1.0",
+  "description": "A simple scaffolding project using Gulp. This will help you precompiling assets, managing dependencies and optimizing your work.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrihellmateus/gulp-start"
+  },
+  "authors": {
+    "name": "Gabriel Mateus",
+    "email": "contato@gabrielmateus.com",
+  },
   "license": "MIT",
-  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",

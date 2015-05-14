@@ -1,0 +1,14 @@
+// Custom icons
+// -----------------------------------
+
+i {
+  position: relative;
+  @extend %inline-middle;
+}
+
+// Sprite icons
+// See _sprite.scss mixins
+
+//.icon-sample {
+//   @include sprite-width($icon-sample);
+// }

@@ -1,0 +1,39 @@
+// Variables
+// -----------------------------------
+
+// Fonts
+$font-size-default: 14px;
+$line-height-default: 16px;
+$font-sans-serif: Helvetica, Arial, sans-serif;
+
+// Colors
+$color-black: #1d1d1b;
+$color-default: $color-black;
+
+// Media queries breakpoints
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1200px;
+$breakpoint-extra-large: $breakpoint-large + 1;
+
+// Assets path
+$assets-path: '../';
+$images-path: '../img/';
+$fonts-path: '../fonts/';
+$vendors-path: '../vendors/';
+
+// Z-indexes
+$zindex: (
+  belowLayer   : -1,
+  defaultLayer : 0,
+  firstLayer   : 1000,
+  secondLayer  : 2000,
+  thirdLayer   : 3000,
+  fourthLayer  : 4000,
+  fifthLayer   : 5000,
+  sixthLayer   : 6000,
+  seventhLayer : 7000,
+  eighthLayer  : 8000,
+  ninthLayer   : 9000,
+  tenthLayer   : 10000
+);
