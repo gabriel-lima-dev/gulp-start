@@ -1,13 +1,13 @@
-module.exports = function(gulp, plugins, browserSync, reload, paths, merge, path) {
+module.exports = function(gulp, plugins, paths, merge, path) {
   return function () {
-    var folders = paths.themes_dir;
-    var tasks = folders.map(function(folder) {
-      return gulp.src(path.join(paths.src_assets, folder, '/js/dest/*.js'))
+    paths.assets.map(function(folder) {
+      return gulp.src(path.join(folder + '/js/app.js'))
         .pipe(plugins.debug({ title: 'Minifying Js files' }))
+        .pipe(plugins.bytediff.start())
         .pipe(plugins.uglify())
-        .pipe(plugins.rename({ extname: '.min.js' }))
-        .pipe(gulp.dest(paths.src_assets + folder + '/js/dest'));
+        .pipe(plugins.bytediff.stop())
+        .pipe(plugins.rename('app.min.js'))
+        .pipe(gulp.dest(folder + '/js/'));
     });
-    return merge(tasks);
   };
 };

@@ -16,7 +16,6 @@ Stylesheet:
 
 + [gulp-csso](https://github.com/ben-eb/gulp-csso)
 + [gulp-sass](https://github.com/dlmanning/gulp-sass)
-+ [gulp-combine-mq](https://github.com/frontendfriends/gulp-combine-mq)
 + [gulp-autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer)
 
 Images:

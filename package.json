@@ -1,0 +1,40 @@
+{
+  "name": "gulp-start",
+  "version": "0.2.0",
+  "description": "A simple scaffolding project using Gulp.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrihellmateus/gulp-start"
+  },
+  "authors": {
+    "name": [
+      "Gabriel Mateus"
+    ],
+    "email": [
+      "frontend@gabrielmateus.com"
+    ]
+  },
+  "license": "OSL-3.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-bytediff": "^1.0.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-debug": "^2.0.1",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.9.4",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.2.4",
+    "gulp.spritesmith": "^4.3.0",
+    "imagemin-jpegtran": "^4.1.0",
+    "imagemin-optipng": "^4.2.0",
+    "jshint-stylish": "^2.0.1",
+    "merge-stream": "^1.0.0"
+  }
+}

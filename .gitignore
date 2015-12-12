@@ -1,19 +1,9 @@
-# Logs
-logs
-*.log
-
-# Dependency directory
-node_modules
-npm-debug.log
-src/assets/vendors
+# Node Modules
+node_modules/
 
 # Mac crap
 .DS_Store
 
 # Development
-/app
-paths.json
-*.sass_cache*
-
-# Custom gulp tasks
-/gulp-tasks/custom-*
+bower_components/
+vendors/

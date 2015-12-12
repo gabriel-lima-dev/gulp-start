@@ -1,0 +1,13 @@
+// --------------------------------------------
+// Mixin - Link
+// --------------------------------------------
+
+@mixin link($border-color: $color-default) {
+  padding-bottom: 2px;
+  border-bottom: 1px solid $border-color;
+
+  &:hover {
+    color: darken($color-aqua, 2%);
+    border-bottom-color: darken($color-aqua, 2%);
+  }
+}

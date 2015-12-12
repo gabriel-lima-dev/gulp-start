@@ -1,0 +1,60 @@
+// --------------------------------------------
+// Config - Vars
+// --------------------------------------------
+
+// Colors
+$c-white: #fff;
+$c-black: #000202;
+
+$c-default: $c-black;
+
+// Font
+$f-sans: 'Helvetica', Arial, sans-serif;
+$f-open-sans: 'Open Sans', $f-sans;
+$f-default: $f-open-sans;
+
+$f-size: 14;
+$f-line-height: 18;
+$f-weight: 400;
+
+// Transition
+$default-transition-property: all;
+$default-transition-duration: .1s;
+$default-transition-function: ease-in-out;
+$default-transition-delay: 0;
+
+// Spacing
+$gap: 10px;
+$trim: 30px;
+
+// Border
+$default-border-radius: 6px;
+
+// Break Points
+$bp-xsmall: 320px;
+$bp-small: 568px;
+$bp-medium: 768px;
+$bp-large: 1024px;
+$bp-xlarge: 1199px;
+
+// Assets path
+$assets-path: '../';
+$images-path: '../images/';
+$fonts-path: '../fonts/';
+$vendors-path: '../vendors/';
+
+// Z-indexes
+$zindex: (
+  belowLayer   : -1,
+  defaultLayer : 0,
+  firstLayer   : 1000,
+  secondLayer  : 2000,
+  thirdLayer   : 3000,
+  fourthLayer  : 4000,
+  fifthLayer   : 5000,
+  sixthLayer   : 6000,
+  seventhLayer : 7000,
+  eighthLayer  : 8000,
+  ninthLayer   : 9000,
+  tenthLayer   : 10000
+);

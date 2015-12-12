@@ -1,0 +1,28 @@
+// --------------------------------------------
+// Mixin - Triangle
+// --------------------------------------------
+
+// Arrow border icons
+@mixin icon-arrow-top($color, $size) {
+  border-style: solid;
+  border-color:  transparent transparent $color transparent;
+  border-width: 0 $size $size $size;
+}
+
+@mixin icon-arrow-bottom($color, $size) {
+  border-style: solid;
+  border-color: $color transparent transparent transparent;
+  border-width: $size $size 0 $size;
+}
+
+@mixin icon-arrow-left($color, $size) {
+  border-style: solid;
+  border-color: transparent $color transparent transparent ;
+  border-width: $size $size  $size 0;
+}
+
+@mixin icon-arrow-right($color, $size) {
+  border-style: solid;
+  border-color: transparent transparent transparent $color;
+  border-width: $size 0 $size $size;
+}

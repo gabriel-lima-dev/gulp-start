@@ -1,4 +1,0 @@
-// Custom component
-(function () {
-
-})();

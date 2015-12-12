@@ -4,14 +4,6 @@
 ## Getting started
 This project requires [Bower](http://bower.io/) and [Gulp](http://gulpjs.com/)
 
-Run the **framework** install script of your choice:
-
-+ laravel
-+ magento
-+ wordpress
-
-`sh install/<framework>/install.sh`
-
 ## Usage
 
 Defautl task `gulp` - precompile and copy files to dest folder: 

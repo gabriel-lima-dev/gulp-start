@@ -1,0 +1,15 @@
+// --------------------------------------------
+// Mixin - Button states
+// --------------------------------------------
+
+// Size
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+// Rounded
+@mixin rounded($size) {
+  @include square($size);
+  border-radius: 100%;
+}
