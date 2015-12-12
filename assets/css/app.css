@@ -1,0 +1,36 @@
+a {
+  transition: all 0.1s ease-in-out 0; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+body {
+  color: #000202;
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+  font-weight: 400;
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch; }
+  .no-rem body {
+    font-size: 14px;
+    line-height: 18.2px; }
+
+a {
+  color: #000202;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent; }
+  a:hover, a:focus, a:active {
+    outline: none; }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }

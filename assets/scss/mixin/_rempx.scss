@@ -1,0 +1,21 @@
+// --------------------------------------------
+// Mixin - Breakpoint
+// --------------------------------------------
+
+// Usage
+// p {
+//   @include rempx(16);
+// }
+
+@mixin f-rempx($value, $l-value: ($value * 1.3)) {
+  $remValue: $value / 10;
+  $remValueLine: $l-value / 10;
+
+  font-size: #{$remValue}rem;
+  line-height: #{$remValueLine}rem;
+
+  .no-rem & {
+    font-size: #{$value}px;
+    line-height: #{$l-value}px;
+  }
+}

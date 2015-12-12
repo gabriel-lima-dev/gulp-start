@@ -1,0 +1,11 @@
+// --------------------------------------------
+// Helper - Function
+// --------------------------------------------
+
+@function zindex($layer) {
+  @if not map-has-key($zindex, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+  }
+
+  @return map-get($zindex, $layer);
+}

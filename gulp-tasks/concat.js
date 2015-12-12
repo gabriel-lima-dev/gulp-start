@@ -1,17 +1,15 @@
-module.exports = function(gulp, plugins, browserSync, reload, paths, merge, path) {
+module.exports = function(gulp, plugins, paths, merge, path) {
   return function () {
-    var folders = paths.themes_dir;
-    var tasks = folders.map(function(folder) {
+    paths.assets.map(function(folder) {
       return gulp.src([
-          paths.src_vendors + 'jquery/dist/jquery.js',
-          paths.src_vendors + 'parsleyjs/dist/parsley.js',
-          paths.src_vendors + 'parsleyjs/src/i18n/pt-br.js',
-          path.join(paths.src_assets, folder, '/js/src/**/*.js')
-        ])
-        .pipe(plugins.debug({ title: 'Build Js files' }))
-        .pipe(plugins.concat('app.js'))
-        .pipe(gulp.dest(paths.src_assets + folder + '/js/dest'));
+        path.join(folder + 'js/**/_*.js')
+      ])
+      .pipe(plugins.plumber())
+      .pipe(plugins.debug({ title: 'Build Js files' }))
+      .pipe(plugins.bytediff.start())
+      .pipe(plugins.concat('app.js'))
+      .pipe(plugins.bytediff.stop())
+      .pipe(gulp.dest(folder + 'js/'));
     });
-    return merge(tasks);
   };
 };

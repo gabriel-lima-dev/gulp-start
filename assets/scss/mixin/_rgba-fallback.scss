@@ -1,0 +1,39 @@
+// --------------------------------------------
+// Mixin - Rgba fallback
+// --------------------------------------------
+
+@mixin rgba-fallback($color, $value) {
+  color: lighten($color, $value);
+  color: fade-out($color, $value);
+}
+
+@mixin rgba-bg-fallback($color, $value) {
+  background-color: lighten($color, $value);
+  background-color: fade-out($color, $value);
+}
+
+// Rgba border fallback
+@mixin rgba-border-fallback($color, $value) {
+  border-color: lighten($color, $value);
+  border-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-top-fallback($color, $value) {
+  border-top-color: lighten($color, $value);
+  border-top-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-left-fallback($color, $value) {
+  border-left-color: lighten($color, $value);
+  border-left-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-right-fallback($color, $value) {
+  border-right-color: lighten($color, $value);
+  border-right-color: fade-out($color, $value);
+}
+
+@mixin rgba-border-bottom-fallback($color, $value) {
+  border-bottom-color: lighten($color, $value);
+  border-bottom-color: fade-out($color, $value);
+}

@@ -1,0 +1,12 @@
+// --------------------------------------------
+// Mixin - Button states
+// --------------------------------------------
+
+@mixin btn-default-states($color, $txtColor: $c-white) {
+  color: $txtColor;
+  background-color: $color;
+
+  &:hover { background-color: darken(saturate($color, 10%), 10%); }
+
+  &:active { background-color: darken(saturate($color, 20%), 10%); }
+}

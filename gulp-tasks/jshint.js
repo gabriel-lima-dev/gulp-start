@@ -1,14 +1,15 @@
-module.exports = function(gulp, plugins, browserSync, reload, paths, merge, path) {
+module.exports = function(gulp, plugins, paths, merge, path) {
   return function () {
-    var folders = paths.themes_dir;
-    var tasks = folders.map(function(folder) {
-      return gulp.src(path.join(paths.src_assets, folder, '/js/src/**/*.js'))
-        .pipe(plugins.debug({ title: 'Hint Js files' }))
-        .pipe(plugins.jshint())
-        .pipe(plugins.jshint.reporter('jshint-stylish'))
-        .pipe(plugins.jshint.reporter('fail'))
-        .on('error', plugins.notify.onError({ sound: true }));
+    paths.assets.map(function(folder) {
+      gulp.src([
+        path.join(folder + '/js/**/_*.js')
+      ])
+      .pipe(plugins.plumber())
+      .pipe(plugins.debug({ title: 'Hint Js files' }))
+      .pipe(plugins.jshint())
+      .pipe(plugins.jshint.reporter('jshint-stylish'))
+      .pipe(plugins.jshint.reporter('fail'))
+      .on('error', plugins.notify.onError({ sound: true }));
     });
-    return merge(tasks);
   };
 };
