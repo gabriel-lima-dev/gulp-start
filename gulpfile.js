@@ -1,19 +1,15 @@
 // Requires
 // ------------------------------------------------
-var path = require('path');
-var merge = require('merge-stream');
-
 var gulp = require('gulp');
-var plugins = require('gulp-load-plugins')();
-var paths = require('./paths.json');
+var gulpDir = "./gulp-tasks/";
+var plugin = require('gulp-load-plugins')();
+var config = require(gulpDir + 'config');
 
 function getTask(task) {
-  return require('./gulp-tasks/' + task)(
+  return require(gulpDir + task)(
     gulp,
-    plugins,
-    paths,
-    merge,
-    path
+    plugin,
+    config
   );
 }
 
@@ -32,12 +28,12 @@ gulp.task('assets', [
 gulp.task('watch', [
   'watch-sprite',
   'watch-scss',
-  'watch-jshint',
   'watch-js'
 ]);
 
-// Min
-gulp.task('min', [
+// Build
+gulp.task('build', [
+  'clear',
   'csso',
   'uglify',
   'imagemin'
@@ -46,26 +42,36 @@ gulp.task('min', [
 // Default
 gulp.task('default', ['assets', 'watch']);
 
-// Single Tasks
+// Dev
 // ------------------------------------------------
 
 // Stylesheet
-gulp.task('scss', getTask('scss'));
+gulp.task('scss', getTask('dev/scss'));
 
 // Javascript
-gulp.task('jshint', getTask('jshint'));
-gulp.task('concat', getTask('concat'));
+gulp.task('jshint', getTask('dev/jshint'));
+gulp.task('concat', getTask('dev/concat'));
 
 // Images
-gulp.task('sprite', getTask('sprite'));
+gulp.task('sprite', getTask('dev/sprite'));
 
 // Watch
-gulp.task('watch-js', getTask('watch/watch-js'));
-gulp.task('watch-scss', getTask('watch/watch-scss'));
-gulp.task('watch-jshint', getTask('watch/watch-jshint'));
-gulp.task('watch-sprite', getTask('watch/watch-sprite'));
+gulp.task('watch-scss', function() {
+  gulp.watch(config.source.scss.partials, ['scss']);
+});
 
-// Min
-gulp.task('csso', getTask('min/csso'));
-gulp.task('uglify', getTask('min/uglify'));
-gulp.task('imagemin', getTask('min/imagemin'));
+gulp.task('watch-js', function() {
+  gulp.watch(config.source.js, ['concat']);
+  gulp.watch(config.source.js, ['jshint']);
+});
+
+gulp.task('watch-sprite', function() {
+  gulp.watch(config.source.imgSprite, ['sprite']);
+});
+
+// Build
+// ------------------------------------------------
+gulp.task('clear', getTask('build/clear'));
+gulp.task('csso', getTask('build/csso'));
+gulp.task('uglify', getTask('build/uglify'));
+gulp.task('imagemin', getTask('build/imagemin'));
