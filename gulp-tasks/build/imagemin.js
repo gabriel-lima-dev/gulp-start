@@ -4,7 +4,6 @@ module.exports = function(gulp, plugin, config) {
 
   return function () {
     gulp.src(config.dest.img + '*.{png,jpg,gif}')
-    .pipe(plugin.debug({ title: 'Minifying Images files' }))
     .pipe(plugin.bytediff.start())
     .pipe(plugin.imagemin({
       progressive: true,

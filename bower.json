@@ -11,7 +11,7 @@
       "Gabriel Mateus"
     ],
     "email": [
-      "frontend@gabrielmateus.com",
+      "me@gabrielmateus.com"
     ]
   },
   "ignore": [
@@ -22,5 +22,6 @@
     "tests"
   ],
   "dependencies": {
+    "angular": "^1.5.0"
   }
 }

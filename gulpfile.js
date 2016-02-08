@@ -20,8 +20,8 @@ function getTask(task) {
 gulp.task('assets', [
   'sprite',
   'scss',
-  'jshint',
-  'concat'
+  'jshint'
+  // 'concat'
 ]);
 
 // Watches
@@ -34,10 +34,10 @@ gulp.task('watch', [
 // Build
 gulp.task('build', [
   'clear',
-  'csso',
-  'uglify',
+  'useref',
   'imagemin'
 ]);
+
 
 // Default
 gulp.task('default', ['assets', 'watch']);
@@ -50,7 +50,7 @@ gulp.task('scss', getTask('dev/scss'));
 
 // Javascript
 gulp.task('jshint', getTask('dev/jshint'));
-gulp.task('concat', getTask('dev/concat'));
+// gulp.task('concat', getTask('dev/concat'));
 
 // Images
 gulp.task('sprite', getTask('dev/sprite'));
@@ -75,3 +75,4 @@ gulp.task('clear', getTask('build/clear'));
 gulp.task('csso', getTask('build/csso'));
 gulp.task('uglify', getTask('build/uglify'));
 gulp.task('imagemin', getTask('build/imagemin'));
+gulp.task('useref', getTask('build/useref'));

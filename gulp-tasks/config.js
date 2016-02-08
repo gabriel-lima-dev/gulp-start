@@ -1,17 +1,18 @@
 var config = {
   source: {
-    js: "./assets/js/**/_*.js",
+    js: "./app/assets/js/**/*.js",
     scss: {
-      main: "./assets/scss/*.scss",
-      partials: "./assets/scss/**/*.scss"
+      main: "./app/assets/scss/*.scss",
+      partials: "./app/assets/scss/**/*.scss"
     },
-    imgSprite: "./assets/images/sprite/*.{png,jpg,gif}"
+    imgSprite: "./app/assets/images/sprite/*.{png,jpg,gif}",
+    html : "./app/index.html"
   },
   dest: {
-    js: "./assets/js/",
-    css: "./assets/css/",
-    img: "./assets/images/",
-    scssSprite: "./assets/scss/config/"
+    js: "./app/assets/js/",
+    css: "./app/assets/css/",
+    img: "./app/assets/images/",
+    scssSprite: "./app/assets/scss/config/"
   },
   build: {
     dir: "./build/",
