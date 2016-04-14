@@ -7,3 +7,5 @@ node_modules/
 # Development
 bower_components/
 vendors/
+build/
+karma_hmtl/

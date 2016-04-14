@@ -1,6 +1,6 @@
 {
   "name": "gulp-start",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple scaffolding project using Gulp.",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
       "Gabriel Mateus"
     ],
     "email": [
-      "frontend@gabrielmateus.com"
+      "me@gabrielmateus.com"
     ]
   },
   "license": "OSL-3.0",
@@ -22,6 +22,7 @@
     "gulp-concat": "^2.5.2",
     "gulp-csso": "^1.0.0",
     "gulp-debug": "^2.0.1",
+    "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.2.1",
     "gulp-jshint": "^1.9.4",
     "gulp-load-plugins": "^1.1.0",
@@ -30,11 +31,19 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^2.0.0",
     "gulp-uglify": "^1.1.0",
-    "gulp-watch": "^4.2.4",
+    "gulp-useref": "^3.0.5",
     "gulp.spritesmith": "^4.3.0",
     "imagemin-jpegtran": "^4.1.0",
     "imagemin-optipng": "^4.2.0",
+    "jasmine-core": "^2.4.1",
     "jshint-stylish": "^2.0.1",
-    "merge-stream": "^1.0.0"
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0"
+  },
+  "dependencies": {
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.7",
+    "del": "^2.2.0"
   }
 }
