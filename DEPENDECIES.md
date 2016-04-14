@@ -23,6 +23,14 @@ Images:
 + [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
 + [gulp.spritesmith](https://github.com/twolfson/gulp.spritesmith)
 
+Tests:
++ [karma](https://karma-runner.github.io)
++ [karma-jasmine](https://github.com/karma-runner/karma-jasmine)
++ [karma-phantomjs-launcher](https://github.com/karma-runner/karma-phantomjs-launcher)
++ [phantomjs](https://www.npmjs.com/package/phantomjs)
++ [phantomjs-prebuilt](https://www.npmjs.com/package/phantomjs-prebuilt)
++ [jasmine-core](https://www.npmjs.com/package/jasmine-core)
+
 Others:
 
 + [gulp-bump](https://github.com/stevelacy/gulp-bump)

@@ -6,11 +6,11 @@ This project requires [Bower](http://bower.io/) and [Gulp](http://gulpjs.com/)
 
 ## Usage
 
-Defautl task `gulp` - precompile and copy files to dest folder: 
+Defautl task `gulp` - precompile and copy files to dest folder 
 
-Dist task `gulp min` - minify `.css`, `.js` and images: 
+Dist task `gulp min` - minify `.css`, `.js` and images
 
-Bump task `gulp bump` - tag versioning:  
+Bump task `gulp bump` - tag versioning
 
 You're good to go.
 
