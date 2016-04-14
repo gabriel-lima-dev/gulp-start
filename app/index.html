@@ -11,7 +11,8 @@
 <body>
     <!-- build:js js/app.js -->
     <!-- Vendors -->
-    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
     <!-- Main module -->
     <script src="modules/main/main.js"></script>
     <!-- Main controllers -->
@@ -22,6 +23,13 @@
     <script src="assets/js/component/component.js"></script>
     <script src="assets/js/plugin/plugin.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:remove - test specs -->
+    <script src="../bower_components/jasmine-jquery/jasmine-jquery.js"></script>
+    <script src="specs/component/componentSpec.js"></script>
+    <script src="specs/plugin/pluginSpec.js"></script>
+    <script src="specs/mainSpec.js"></script>
     <!-- endbuild -->
 </body>
 </html>

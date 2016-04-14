@@ -1,6 +1,6 @@
 {
   "name": "gulp-start",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple scaffolding project using Gulp.",
   "repository": {
     "type": "git",
@@ -35,9 +35,15 @@
     "gulp.spritesmith": "^4.3.0",
     "imagemin-jpegtran": "^4.1.0",
     "imagemin-optipng": "^4.2.0",
-    "jshint-stylish": "^2.0.1"
+    "jasmine-core": "^2.4.1",
+    "jshint-stylish": "^2.0.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0"
   },
   "dependencies": {
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.7",
     "del": "^2.2.0"
   }
 }

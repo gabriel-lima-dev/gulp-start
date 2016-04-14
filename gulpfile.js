@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var gulpDir = "./gulp-tasks/";
 var plugin = require('gulp-load-plugins')();
-var config = require(gulpDir + 'config');
+var config = require(gulpDir + 'gulpconfig');
 
 function getTask(task) {
   return require(gulpDir + task)(
