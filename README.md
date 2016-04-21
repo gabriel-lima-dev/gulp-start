@@ -15,7 +15,7 @@ Bump task `gulp bump` - tag versioning
 You're good to go.
 
 ## Dependecies
-[These are](https://github.com/gabrihellmateus/gulp-start/edit/master/DEPENDECIES.md) the dependencies and gulp plugins there will be used.
+[These are](https://github.com/gabrihellmateus/gulp-start/blob/master/DEPENDECIES.md) the dependencies and gulp plugins there will be used.
 
 ## Bower default components
 Change your `.bower.json` with the dependencies of you nedd, also change the paths in `concat.js` task from gulp-tasks folder.
