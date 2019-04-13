@@ -1,4 +1,4 @@
-# Gulp start
+# [DEPRECATED] Gulp start
 > A simple scaffolding project using Gulp. This will help you precompiling assets, managing dependencies and optimizing your work.
 
 ## Getting started
